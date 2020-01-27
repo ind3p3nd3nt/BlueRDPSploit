@@ -2,8 +2,7 @@
 
 ---FIRST MAKE SURE YOU ARE ROOT---
 
-chmod +x bluerdpsploit
-./bluerdpsploit 192.168.0.0-192.168.2.255
+chmod +x bluerdpsploit && ./bluerdpsploit 192.168.0.0-192.168.2.255
 
 ---THATS IT---
 
