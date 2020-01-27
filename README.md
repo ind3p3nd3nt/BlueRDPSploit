@@ -1,14 +1,16 @@
----TO INSTALL AND RUN--- (tested on Kali 2020.1)
+  ---TO INSTALL AND RUN--- (tested on Kali Linux 2020.1)
 
----FIRST MAKE SURE YOU ARE ROOT---
+  ---FIRST MAKE SURE YOU ARE ROOT---
 
-chmod +x bluerdpsploit && ./bluerdpsploit 192.168.0.0-192.168.2.255
+      # git clone https://github.com/independentcod/BlueRDPSploit.git
+      # cd BlueRDPSploit
+      # chmod +x bluerdpsploit && ./bluerdpsploit 192.168.0.0-192.168.2.255
 
----THATS IT---
+  ---THATS IT---
 
-Enjoy and live happy!
+    Enjoy and hack happy!
 
 
----BUGS---
+  ---BUGS---
 
-Please open a new ticket and I will reply ASAP.
+    Please open a new ticket and I will reply ASAP.
