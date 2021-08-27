@@ -10,9 +10,7 @@ echo Installing necessary files to run this nasty script.;
 apt update && apt install git metasploit-framework libssl-dev -y;
 service postgresql start;
 msfdb init;
-git clone https://github.com/robertdavidgraham/masscan.git;
-cd masscan;
-make -j8 && make install;
+apt install masscan -y
 cd ..;
 git clone https://github.com/robertdavidgraham/rdpscan.git;
 cd rdpscan;
