@@ -1,5 +1,5 @@
-  ---TO INSTALL--- (tested on Kali Linux 2020.1)
-  sh install.sh
+  # ---TO INSTALL--- (tested on Kali Linux 2020.1)
+  ### sh install.sh
   
   ---TO RUN---
        git clone https://github.com/independentcod/BlueRDPSploit.git
