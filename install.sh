@@ -14,8 +14,8 @@ apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys ED444FF07D8D0B
 echo "Updating..."
 apt update && apt install git metasploit-framework masscan libssl-dev -y;
 else
-yum install epel-release postgresql -y
-yum install masscan -y
+yum install epel-release centos-release -y
+yum install masscan postgresql -y
 curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall
 chmod +x msfinstall
 ./msfinstall;
