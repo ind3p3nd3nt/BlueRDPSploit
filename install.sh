@@ -1,8 +1,7 @@
 #!/bin/bash
-echo BlueKeep AutoExploit script by independent, DEPLOYING;
+echo BlueKeep AutoExploit script
 echo https://github.com/ind3p3nd3nt/BlueRDPSploit;
 echo Facebook: https://fb.me/remi.girard2;
-echo LinkedIn: https://rebrand.ly/1091c;
 echo ---DISCLAIMER--- I AM NOT RESPONSIBLE FOR ANY ACTIONS YOU MAKE WITH THIS PROGRAM. THE ONLY RESPONSIBLE PERSON IS YOU!;
 echo "Install required components";
 if [ -f /usr/bin/apt ]; then 
@@ -12,9 +11,10 @@ echo "Adding Kali Sources"
 echo deb http://kali.download/kali kali-rolling main contrib non-free >/etc/apt/sources.list
 apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys ED444FF07D8D0BF6
 echo "Updating..."
-apt update && apt install git metasploit-framework masscan libssl-dev -y;
+apt update && apt install git build-essential metasploit-framework masscan libssl-dev -y;
 else
 yum install epel-release centos-release -y
+yum groupinstall 'Development Tools' -y
 yum install masscan postgresql -y
 curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall
 chmod +x msfinstall
