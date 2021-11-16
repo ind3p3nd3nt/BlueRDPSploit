@@ -1,5 +1,5 @@
 #!/bin/bash
-masscan -p 3389 --range $1 --rate 100000 | ./rdp --file - >rdp.lst &
+masscan -p 3389 --range $1 --rate 100000 | /usr/bin/rdp --file - >rdp.lst &
 sleep 1s;
 echo PLEASE WAIT... Sleeping one minute, to populate vulnerable servers list...;
 sleep 1m;
