@@ -7,13 +7,20 @@ echo ---DISCLAIMER--- I AM NOT RESPONSIBLE FOR ANY ACTIONS YOU MAKE WITH THIS PR
 echo "Backing up sources.list";
 cp /etc/apt/sources.list /root/sources.list.bak -r;
 echo "Install required components";
-echo "Adding Kali Sources";
+if [ -f /usr/bin/apt ]; then 
+echo "Adding Kali Sources"
 echo deb http://kali.download/kali kali-rolling main contrib non-free >/etc/apt/sources.list
-apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys ED444FF07D8D0BF6;
-echo "Updating...";
+apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys ED444FF07D8D0BF6
+echo "Updating..."
 apt update && apt install git metasploit-framework libssl-dev -y;
-service postgresql start;
-msfdb init;
+else
+yum install postgresql -y
+curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall
+chmod +x msfinstall
+./msfinstall;
+fi
+systemctl start postgresql
+msfdb init
 apt install masscan -y
 cd ..;
 git clone https://github.com/robertdavidgraham/rdpscan.git;
