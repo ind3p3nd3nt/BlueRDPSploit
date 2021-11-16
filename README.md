@@ -1,4 +1,4 @@
-  # ---TO INSTALL--- (tested on Kali Linux 2020.1)
+  # ---TO INSTALL--- (tested on Kali Linux, Debian, Ubuntu and CentOS)
   ### sh install.sh
   
   # TO RUN
